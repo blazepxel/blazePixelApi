@@ -5,6 +5,6 @@
     <title></title>
   </head>
   <body>
-    {{ $message }}
+    {{ $name }}
   </body>
 </html>
