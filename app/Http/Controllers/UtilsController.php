@@ -9,12 +9,12 @@ use Mail;
 class UtilsController extends Controller
 {
     function contact (Request $request) {
-      $name = $request->name;
-      $subject = $request->subject;
-      $mess = $request->message;
-      $email = $request->email;
-      Mail::send('mails.contact', ['name' => $request->name],
-        function($message) use ($name, $subject, $mess, $email){
+      Mail::send('emails.contact', [
+        'name' => $request->name,
+        'subject' => $request->subject,
+        'body' => $request->message,
+        'email' => $request->email
+      ], function($message){
         $message->from('noreply@blazepxel.com', 'Contacto ');
         $message->to('contacto@blazepxel.com', 'Atención ...')->subject('Contacto');
       });
