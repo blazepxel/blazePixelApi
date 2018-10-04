@@ -24,7 +24,7 @@ class UtilsController extends Controller
         'email' => $request->email,
         'tel' => $request->tel,
         'to' => $to,
-      ], function($message){
+      ], function($message) use ($to){
         $message->from('noreply@blazepxel.com', 'Contacto ');
         $message->to($to, 'Atención')->subject('Contacto');
       });
