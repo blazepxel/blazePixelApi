@@ -13,6 +13,9 @@
           Nombre: {{ $name }}
         </div>
         <div class="column">
+          Teléfono: {{ $tel }}
+        </div>
+        <div class="column">
           Asunto: {{ $subject }}
         </div>
         <div class="column">
